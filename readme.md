@@ -1,6 +1,8 @@
-PythonExamples
-==============
-
-HelloWorld is a Django App that prints Hello World
-MPI is a "many-voices-in-one-head programming" as described in http://pytools.codeplex.com/wikipage?title=Detailed%20Walk-thu%20Guide%20-%20HPC%20and%20Cloud%20Features.
-KFS is a Kosmos file system application
+# OAuth implementors require jumping through hoops to sign and make a request.
+# Here we simply propose the use of an OTP token to sign and make a request.
+# implemented in totp.py
+# for more detail, please visit : http://1drv.ms/13YBENz
+otp = OneTimePasswordAlgorithm()
+import hashlib
+otp.generateTOTP('90AB891C', '123465539', '6', hashlib.sha256)
+'857652'
